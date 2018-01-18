@@ -1,4 +1,4 @@
-# PropsToCamelCase
+# PropsToCamelCase [![Build Status](https://travis-ci.org/tn/props-to-camelcase.svg?branch=master)](https://travis-ci.org/tn/props-to-camelcase)
 
 This library convert underscored object keys to camelCase.
 It's helpful when you get some props or response from third party like APIs or libraries when your ESlint config configured to strict camelCase properties.
