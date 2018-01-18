@@ -27,7 +27,7 @@ function parseArray (arr) {
  * @returns {boolean}
  */
 function isObject (val) {
-  return val !== null && typeof val === 'object' && !Array.isArray(val);
+  return val !== null && typeof val === 'object' && !Array.isArray(val) && !val.then;
 }
 
 /**
@@ -67,7 +67,7 @@ export default function propsToCamelCase (props) {
       throw new TypeError('Function takes only objects, arrays and promises');
     }
 
-    return isObject(props) ? parse(props) : (Array.isArray(props) ? parseArray(props) : props.then(res => (Promise.resolve(parse(res)))));
+    return isObject(props) ? parse(props) : (Array.isArray(props) ? parseArray(props) : props.then(res => (new Promise(resolve => (resolve(parse(res)))))));
   } catch (err) {
     return err;
   }

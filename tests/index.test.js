@@ -39,8 +39,9 @@ describe('propsToArray', function () {
       resolve({ my_prop: 'myProp' });
     });
 
-    promise
-      .then(lib)
+    let output = lib(promise);
+
+    output
       .then((res) => {
         assert.equal(res.myProp, 'myProp');
         done();
