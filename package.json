@@ -1,6 +1,6 @@
 {
   "name": "props-to-camelcase",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Convert underscored props to camelCase",
   "main": "dist/index.bundle.js",
   "scripts": {
