@@ -1,12 +1,12 @@
 # PropsToCamelCase [![Build Status](https://travis-ci.org/tn/props-to-camelcase.svg?branch=master)](https://travis-ci.org/tn/props-to-camelcase)
 
 This library convert underscored object keys to camelCase.
-It's helpful when you get some props or response from third party like APIs or libraries when your ESlint config configured to strict camelCase properties.
+It's helpful when you get some props or response from third party like APIs or libraries when your ESlint configured to strict camelCase properties.
 
 ## Examples
 
 ```javascript
-import propsToCamelCase from 'propsToCamelCase';
+import propsToCamelCase from 'props-to-camelcase';
 
 let obj = propsToCamelCase({
   user_id: 1,
@@ -34,6 +34,11 @@ fetch('/users')
   .then(propsToCamelCase)
   .then(res => console.log(res));
 
+// [{ userId: 1, userName: 'John Doe' }]
+
+const promise = fetch('/users').then(res => res.json());
+
+console.log(propsToCamelCase(promise));
 // [{ userId: 1, userName: 'John Doe' }]
 ```
 
