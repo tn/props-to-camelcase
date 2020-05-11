@@ -8,7 +8,8 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'index.bundle.js',
     library: 'propsToCamelCase',
-    libraryTarget: 'umd'
+    libraryTarget: 'umd',
+    globalObject: 'this'
   },
   module: {
     rules: [
