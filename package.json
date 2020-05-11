@@ -1,6 +1,6 @@
 {
   "name": "props-to-camelcase",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Convert underscored props to camelCase",
   "main": "dist/index.bundle.js",
   "scripts": {
@@ -16,16 +16,16 @@
   "author": "tn <t.nurislamov@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "babel-core": "6.26.0",
-    "babel-loader": "7.1.2",
-    "babel-plugin-transform-object-rest-spread": "6.26.0",
-    "babel-preset-env": "1.6.1",
-    "babel-preset-es2017": "6.24.1",
-    "clean-webpack-plugin": "0.1.17",
-    "eslint": "4.15.0",
-    "mocha": "4.1.0",
-    "mocha-loader": "1.1.2",
-    "webpack": "3.10.0"
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "babel-loader": "^8.0.0",
+    "clean-webpack-plugin": "^0.1.17",
+    "eslint": "^4.15.0",
+    "mocha": "^4.1.0",
+    "mocha-loader": "^1.1.2",
+    "webpack": "^4.0.0",
+    "webpack-cli": "^3.3.11"
   },
   "dependencies": {}
 }
